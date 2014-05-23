@@ -27,6 +27,18 @@ macx: {
     PROTOBUF_LIB_PATH = /opt/local/lib
 }
 
+linux: {
+    ZEROMQ_INCLUDE_PATH = /opt/include
+    ZEROMQ_LIB_PATH = /opt/lib
+    ZEROMQ_LIB_FLAGS = -Bstatic
+    PROTOBUF_INCLUDE_PATH = /opt/include
+    PROTOBUF_LIB_PATH = /opt/lib
+    PROTOBUF_LIB_FLAGS = -Bstatic
+    PROTOBUF_PROTOC = /opt/bin/protoc
+    LIBSODIUM_LIB_PATH = /opt/lib
+}
+
+
 # Qt SDK directory - autodetected based on qmake path
 QTSDK_DIR=$$absolute_path($$[QT_INSTALL_PREFIX]/../..)
 
