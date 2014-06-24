@@ -3,11 +3,11 @@
 # Add here the paths that are not in the global PATH or INCLUDEPATH
 # environment variables usually for mobile OS
 android: {
-    ZEROMQ_INCLUDE_PATH = /opt/zeromq-android/include
-    ZEROMQ_LIB_PATH = /opt/zeromq-android/lib
+    ZEROMQ_INCLUDE_PATH = /home/mah/android/android-libs/include
+    ZEROMQ_LIB_PATH = /home/mah/android/android-libs/lib
     ZEROMQ_LIB_FLAGS = -Bstatic
-    PROTOBUF_INCLUDE_PATH = /opt/protobuf-android/include
-    PROTOBUF_LIB_PATH = /opt/protobuf-android/lib
+    PROTOBUF_INCLUDE_PATH = /home/mah/android/android-libs/include
+    PROTOBUF_LIB_PATH = /home/mah/android/android-libs/lib
     PROTOBUF_LIB_FLAGS = -Bstatic
 }
 ios: {
@@ -26,6 +26,18 @@ macx: {
     PROTOBUF_INCLUDE_PATH = /opt/local/include
     PROTOBUF_LIB_PATH = /opt/local/lib
 }
+
+#linux|!android: {
+#    ZEROMQ_INCLUDE_PATH = /usr/local/include
+#    ZEROMQ_LIB_PATH = /usr/local/lib
+#    ZEROMQ_LIB_FLAGS = -Bstatic
+#    PROTOBUF_INCLUDE_PATH = /usr/local/include
+#    PROTOBUF_LIB_PATH = /usr/local/lib
+#    PROTOBUF_LIB_FLAGS = -Bstatic
+#    PROTOBUF_PROTOC = /usr/local/bin/protoc
+##    LIBSODIUM_LIB_PATH = /opt/lib
+#}
+
 
 # Qt SDK directory - autodetected based on qmake path
 QTSDK_DIR=$$absolute_path($$[QT_INSTALL_PREFIX]/../..)
